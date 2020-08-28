@@ -1,0 +1,106 @@
+GCP:
+RESOURCE HIERARCHY BASICS:
+In this all resources are arranged under the organization node including projects.
+Resources can be grouped and managed together according to our organizational structure.
+The top of this hierarchy is the organizational node.
+FOLDERS:
+Folders are used mainly for organization and after all may make a company structure like finance,marketing,HR etc.
+Folders group projects under on an organization node and it conatins projects and other folders or both.
+We can use polices to assign access policies
+ROLES:
+Three main types of roles can be applied to GCP users and resources:
+Primitive, predefined and custom.
+Primitive roles:
+Owner:we can do everything an editor can do plus manage roles and permissions on the resource
+Editor:we can do everything a viewer can do plus change its state 
+Viewer:we can examine it but not change its state
+Billing Administrator:managebilling and add or remove administrators
+Predefined roles:
+these are used to system and data security
+ABOUT PROJECT ACCOUNT:
+PROJECT ID     : globally unique,immutable nature
+PROJECT NAME   : need not be unique,mutable 
+PROJECT NUMBER :  globally unique,immutable and it is assigned by gcp
+------------------------------------------------------------------------------------------------------------------------
+There are four ways you can interact with Google Cloud Platform:
+Google Cloud Platform Console
+Cloud Shell and Cloud SDK
+Cloud Console Mobileapp
+REST-based api
+
+COMPUTE OPTIONS:
+App engine
+Compute engine
+Google Kubernetes engine
+
+STORAGE AND DATABASE OPTIONS:
+Relational      Non Relational   Object           Warehouse
+-------------------------------------------------------------------------------------------------------------------------------
+1.Cloud SQL     Cloud datastore  Cloud Storage    BigQuery
+2Cloud Spanner  Cloud Bigtable   
+-------------------------------------------------------------------------------------------------------------------------------
+1.Cloud SQL:
+It is fully managed MySQL and PostgreSQL database service
+2.Cloud Spanner:
+Relational database with transactional consistency,globl scale and high availability
+3.BigQuery:
+it is a scalable,fully managed enterprise data warehouse with SQL
+4.BigTable:
+NoSQL wide cloumn database
+
+Cloud Storage Classes:
+Regional, Multi-regional, Nearline, and Coldline
+Multi-regional and Regional are used  for high-performance Object Storage
+Nearline and Coldline are used for backup and archival storage
+Multi-regional storage is appropriate for storing frequently accessed data, Website content, interactive workloads
+Multi-regional having the highest availability of 99.95 percent
+regional having the availability of 99.90 percent
+Nearline and Coldline are have 99.00 %
+Compute engines:
+These offers managed virtual machines
+Pick persistent disks SSD or standard
+There are two kinds of VM instance groups: unmanaged and managed.
+Unmanaged instances:
+Unmanaged instance groups are collections of instances that are not necessarily identical and don't share a common instance template.
+Instance templates define the machine type, boot disk image or container image, labels and other instance properties
+Instance templates are designed to create instances with identical configurations ,so it is not possible to modify after it has been created
+Managed instances:
+Managed instance groups allow you to operate on multiple identical VMs
+
+Kubernete engines:
+Containers:
+Containers are often used to implement microservices.
+It is also possible that one container can run the whole application on a single host.
+If there are more containers then we can manage them by kubernetes and by n/w connections.
+Kubernetes is a set of APIs that you can use to deploy containers on a set of nodes called the cluster.
+Then we can deploy containers on nodes using one or more containers called a pod.
+A pod is the smallest unit in Kubernetes and it represents a running process on your cluster 
+The pod provides a unique network IP and a set of ports for your container.
+One container inside a pod can communicate with one another using localhost and ports. 
+And Kubernetes node is a virtual machine running in Compute Engine
+
+App engine:
+App engine focus on data by Paas rather than infrastructure like comput and kubernetes engines.
+It also provides the hardware & software networking infrastructure required to run ur code.
+Google provides App Engine software development kits in several languages.
+so that you can test your application locally before you upload it to the real App Engine service
+Actually there are two App Engine environments, standard and flexible.
+Standard environment:
+It provides runtimes for specific versions of Java, Python, PHP, and Go.
+If you want to write your code in another language, then the standard environment is not right for you
+It also enforces restrictions on your code by making it run as a so-called sandbox.
+Sandbox constraints:
+1.we are not supposed to write our application to our local file system.
+2.The request for your application has a 60-second timeout.
+3.We can't install arbitrary third party software.
+If any one of these constraints not suitable for u then u can go for flexible environment.
+FLEXIBLE ENVIRONMENTS:
+1.No sandbox constraints
+
+Cloud Functions:
+we can use to connect and extend Cloud services.
+It create single purpose functions that respond to event w/o aserver or runtime.
+
+
+
+
