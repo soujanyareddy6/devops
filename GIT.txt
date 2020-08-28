@@ -1,0 +1,77 @@
+GIT;
+       Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
+
+DIFF:
+=>diff is used to find differences between two files. On its own, it’s a bit hard to use; instead, use it with diff -u to find lines which differ in two files.
+=>diff -u is used to compare two files, line by line, and have the differing lines compared side-by-side in the same output. 
+EX;  diff -u  rep.py  res.py  
+PATCH;
+=> Patch is useful for applying file differences. See the below example, which compares two files. The comparison is saved as a .diff file, which is then patched to the original file!
+EX;diff -u hello_world.txt hello_world_long.txt > hello_world.diff
+
+patch < hello_world.diff
+
+VERSION CONTROL SYSTEM:
+=> keep track of changes we make to file.
+
+*create new repository---git init
+*  goto the code---atom filename
+*to view all commits---git log
+*shoetcut to stage any changes to tracked files and commit them in one step---git commit -a
+* to delete---git rm 
+* to rename---git mv
+* Undoing Changes----git checkout
+* to remove changes from stagging area---git reset
+*Amending Commits(if we forget add file but we commit and again to add file to that amend used means Overwrite the previous commit)---git commit --amend
+*Rollbacks( New commit is created with inverse changes & This cancels previous changes )---git revert HEAD 
+
+=>git use hash to produce commit number.By using that we can know commit details.
+
+BRANCH:
+*A pointer to particular commit.It represents independent line of development project.
+*A default branch git create for us when a new repository is initialized is called MASTER.
+=> git branch
+=>creating branch with name---git branch filename
+=>git branch
+=>git checkout filename
+=> create a new branch and switch to new branch---git checkout -b newname
+=>HEAD is moved to the relevant commit on the specified branch---git checkout master
+
+MERGING:
+*The term that git uses for combining branched data and history together.It uses 2 algorithms to perform merge:fast-forward and three-way merge.
+=> git merge newname
+=>to escape hatch---git merge --abort
+Three way merge:
+=>git log -p origin/master
+
+GITHUB
+*It lets us share and access repositories on the web and copy or clone them to our local computer.GitHub provides free access to a Git server for public and private repositories.
+
+Push command:
+*Git push is used to push commits from your local repo to a remote repo.The git push command gathers all the snapshots we've taken and sends them to the remote repository.
+=> git push
+
+Pull command:
+*Git pull is used to fetch the newest updates from a remote repository.It use to retrieve new changes ferom repository.
+=>git pull.
+*git clone URL-Git clone is used to clone a remote repository into a local workspace.
+
+Remote Repository;
+*A remote in Git is a common repository that all team members use to exchange their changes. In most cases, such a remote repository is stored on a code hosting service like GitHub or on an internal server.
+=>git remote -v
+=> to get a local copy of a remote repository---git clone
+=>to make a change to a remote branch--Pull the remote branch, merge it with the local branch, then push it back to its origin.
+
+Fetch command:
+*This command copies the commits done in remote repository to the remote branches.
+=>git fetch
+=>git fetch fetches remote updates but doesn't merge; git pull fetches remote updates and merges.
+
+*git remote ---Lists remote repos
+*git remote -v---List remote repos verbosely
+*git remote show <name>---Describes a single remote repo
+*git remote update---Fetches the most up-to-date objects
+*git fetch---Downloads specific objects
+*git branch -r---Lists remote branches; can be combined with other branch arguments to manage remote branches
+=>
+
