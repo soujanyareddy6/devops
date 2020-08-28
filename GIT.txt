@@ -1,8 +1,9 @@
 GIT;
+  Git commands     
        Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
 
 DIFF:
-=>diff is used to find differences between two files. On its own, it’s a bit hard to use; instead, use it with diff -u to find lines which differ in two files.
+=>diff is used to find differences between two files. On its own, itâ€™s a bit hard to use; instead, use it with diff -u to find lines which differ in two files.
 =>diff -u is used to compare two files, line by line, and have the differing lines compared side-by-side in the same output. 
 EX;  diff -u  rep.py  res.py  
 PATCH;
